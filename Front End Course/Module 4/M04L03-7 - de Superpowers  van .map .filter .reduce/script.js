@@ -148,83 +148,71 @@ const superheroes = [
 // const marvel = superheroes.filter((superheroMarvel) => {
 //     return superheroMarvel.publisher == "Marvel Comics"
 //   });
-  
+
 //   console.log(marvel);
 
 // 6 Tel het gewicht van alle superhelden van DC Comics bij elkaar op. Let op! Conditionals to the rescue! Het gewicht dat je ziet in de movieDatabase, van welk datatype is dat? Een nummer? Of een string? Oh ja, en hebben alle superhelden wel een gewicht?
-
-// chaining? 
-
-
-// functie alle dcCommics
 
 // const dcCommics = superheroes.filter((superheroDc) => {
 //   return superheroDc.publisher == "DC Comics"
 // });
 
-// console.log(dcCommics);
-
-// const bigSum = dcCommics;
-// // const reducer = (accumulator, currentValue) => accumulator + currentValue;
-// // console.log(bigSum.reduce(reducer));
-// console.log(parseInt(bigSum));
-
-// subprojectje tel alle gewicht uberhaupt bij elkaar op
-
-// 1 Maak een array van alle superhelden namen
-
-//------------------------------------------------------------------
-// const allHeroesWeight = superheroes.map(function (superheroes) {
-//     return superheroes.weight;
+// const allHeroesWeight = dcCommics.map(function (superheroes) {
+//   return superheroes.weight;
 // });
-//     let allHeroesAllWeight = allHeroesWeight;
+// let allHeroesAllWeight = allHeroesWeight;
 
-//     //deze filtered method werkt
-//     let filtered = allHeroesAllWeight.filter(function(value) {
-//         return value >= 0;
-//     })
+// let filtered = allHeroesAllWeight.filter(function (value) {
+//   return value >= 0;
+// });
 
-//     let parced = filtered;    
-       
-// } 
-  //---------------------------------------------------------------------------      
-    //array omzetten in integers
-    // filtered.forEach((filtered) => {
-    //     parseInt(filtered, 10);
-    // })
+// var a = filtered
+// var parced = a.map(function (x) {
+//   return parseInt(x, 10);
+// });
 
-    // console.log(filtered);
-
-
-
-
-        // const reducer = (accumulator, currentValue) => accumulator + currentValue;
-    // console.log(allHeroesAcc.reduce(reducer));
-
-        
-        // console.log(allHeroesAllWeight);
-// console.log(allHeroesWeight);
-
-
-  // Pseudo code (bijna echte code):
-
-//   heroes.map(hero => {
-//     return [doe iets met de hero]
-//     }).filter(hero => {
-//             return [doe iets met de array die zojuist al door de map functie heen is
-//      geweest, en er dus anders uitziet dan die originele array]
-//     }
-
-const dcCommics = superheroes.filter((superheroDc) => {
-  return superheroDc.publisher == "DC Comics"
-});
-
-console.log(dcCommics);
-
-
+// const bigSum = parced;
+// const reducer = (accumulator, currentValue) => accumulator + currentValue;
+// console.log ("The weigt of all DC Commics heroes is:",(bigSum.reduce(reducer)), "pounds.");
 
 // 7 Doe hetzelfde met alle superhelden van Marvel Comics
 
+// const marvel = superheroes.filter((superheroMarvel) => {
+//   return superheroMarvel.publisher == "Marvel Comics";
+// });
 
+// const allHeroesWeight = marvel.map(function (superheroes) {
+//   return superheroes.weight;
+// });
+// let allHeroesAllWeight = allHeroesWeight;
+
+// let filtered = allHeroesAllWeight.filter(function (value) {
+//   return value >= 0;
+// });
+
+// var a = filtered;
+// var parced = a.map(function (x) {
+//   return parseInt(x, 10);
+// });
+
+// const bigSum = parced;
+// const reducer = (accumulator, currentValue) => accumulator + currentValue;
+// console.log(
+//   "The weigt of all Marvel heroes is:",
+//   bigSum.reduce(reducer),
+//   "pounds."
+// );
 
 // 8 Bonus: zoek de zwaarste superheld!
+
+// const allHeroesWeight = superheroes.map(function (superheroes) {
+//   return superheroes.weight;
+// });
+// let allHeroesAllWeight = allHeroesWeight;
+
+// let filtered = allHeroesAllWeight.filter(function (value) {
+//   return value >= 0;
+// });
+
+// let maxWeight = Math.max(...filtered);
+// console.log("maxWeight);
