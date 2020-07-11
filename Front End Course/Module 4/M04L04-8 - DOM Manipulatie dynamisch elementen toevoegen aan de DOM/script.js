@@ -15,7 +15,8 @@ let removeFirstItem = () => {
 };
 
 let removeAll = () => {
-  let allItems = document.getElementById("spotted-animals-list").remove();
+  let allItems = document.getElementById("spotted-animals-list");
+  allItems.innerHTML = "";
 };
 
 let bigFiveButtonClick = document.querySelectorAll(".big-five-button");
