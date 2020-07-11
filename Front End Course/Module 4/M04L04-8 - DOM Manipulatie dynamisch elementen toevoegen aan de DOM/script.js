@@ -1,34 +1,30 @@
-// 1 Maak een event-listener vast aan de buttons
-
 console.log("Hij doet het!");
 
-const animalSpotted = event => {
-  console.log("spotted:", event.target.textContent);
-  const spottedAnimal = event.target.textContent;
-  // const listItem = document.createElement("li");
-  // listItem.appendChild(document.createTextNode(spottedAnimal));
-  const list = document.getElementById("spotted-animals-list");
-  // list.appendChild(listItem);
+let animalSpotted = (event) => {
+  console.log("spotted:", event.target.innerHTML);
+  let spottedAnimal = event.target.innerHTML;
+  let newLi = document.createElement("li");
+  newLi.appendChild(document.createTextNode(spottedAnimal));
+  let newLiItem = document.getElementById("spotted-animals-list");
+  newLiItem.appendChild(newLi);
 };
 
-document.addEventListener("DOMContentLoaded", function() {
-  const animalButtons = document.querySelectorAll(".big-five-button");
-  animalButtons.forEach(function(animalButton) {
-    animalButton.addEventListener("click", animalSpotted);
-  });
+let removeFirstItem = () => {
+  let firstItem = document.getElementById("spotted-animals-list").firstChild;
+  firstItem.remove();
+};
+
+let removeAll = () => {
+  let allItems = document.getElementById("spotted-animals-list").remove();
+};
+
+let bigFiveButtonClick = document.querySelectorAll(".big-five-button");
+bigFiveButtonClick.forEach(function (bigFiveButtonClick) {
+  bigFiveButtonClick.addEventListener("click", animalSpotted);
 });
 
+let removeFirstItemButton = document.getElementById("remove-first-item-button");
+removeFirstItemButton.addEventListener("click", removeFirstItem);
 
-
-
-// 2 Maak een functie die gecalled wordt op het moment dat er op 1 van de buttons wordt geklikt. Check dit met een console.log.
-
-// 3 Zorg dat het click event wordt doorgegeven aan deze functie.
-
-// 4  Zorg dat je toegang hebt tot de waarde (value) van de button waar op is geklikt in deze functie. Check dit met console.log. De uitkomst die je wilt zien in de console wanneer je klikt is: Leopard / Lion / Elephant / Rhino of Buffalo.
-
-// 5 Creëer een nieuw list-item met JavaScript met de bovenstaande waarde (namelijk het dier waar je op hebt geklikt.
-
-// 6 Selecteer het parent-element waar je dit nieuwe list-item aan vast wilt maken (de spotted animals list).
-
-// 7 Maak het nieuwe list-item vast aan het parent-element.
+let removeAllButons = document.getElementById("remove-all-button");
+removeAllButons.addEventListener("click", removeAll);
