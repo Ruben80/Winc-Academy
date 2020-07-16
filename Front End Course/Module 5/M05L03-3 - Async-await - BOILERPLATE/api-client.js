@@ -1,4 +1,4 @@
-const API_KEY = "755288a357cf99a4fbb529cdd9d554f2";
+const API_KEY = "**************************";
 
 
 const getData = async function () {
