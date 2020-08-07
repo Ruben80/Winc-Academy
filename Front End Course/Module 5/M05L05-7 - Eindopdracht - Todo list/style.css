@@ -1,0 +1,53 @@
+.deleteIcon {
+  background-image: url(./trashdelete.png);
+  text-align: right;
+  background-size: 20px 20px;
+  width: 20px;
+  height: 20px;
+  border: none;
+  margin-left: 15px;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#addTaskButton {
+  background-color: #467ab2;
+  color: #fff;
+  padding: 5px;
+  border: 1px solid #467ab2;
+  border-radius: 10%;
+  width: 70px;
+}
+
+#new-task-text {
+  padding: 5px;
+  width: 350px;
+}
+
+#add-task-field {
+  align-self: center;
+  margin-bottom: 40px;
+}
+
+li {
+  display: flex;
+  width: 500px;
+  height: 50px;
+  border: 1px solid darkgrey;
+  list-style: none;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+}
+
+h1 {
+  margin-left: 150px;
+}
+
+input {
+  margin-left: 150px;
+}
