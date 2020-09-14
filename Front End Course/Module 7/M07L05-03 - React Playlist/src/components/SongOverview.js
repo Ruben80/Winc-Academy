@@ -1,6 +1,7 @@
 import React from "react";
 import SongForm from "./SongForm";
-import SongList from "./SongList";
+// import SongList from "./SongList";
+import Routing from "../Routing";
 
 class SongOverview extends React.Component {
   state = {
@@ -26,6 +27,9 @@ class SongOverview extends React.Component {
     return (
       <div>
         <h1>Welcome to your personal playlist </h1>  
+        <nav>
+        <Routing />
+        </nav>
 
         <SongForm onSubmit={this.addSong} handleDelete={this.handleDelete} />
         {this.state.songs.map((song) => (
@@ -46,8 +50,7 @@ class SongOverview extends React.Component {
               
             </table>
           </div>
-        ))}
-        <SongList />
+        ))}        
       </div>
     );
   }
