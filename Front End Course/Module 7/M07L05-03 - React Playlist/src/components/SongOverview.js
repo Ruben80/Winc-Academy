@@ -1,6 +1,6 @@
 import React from "react";
 import SongForm from "./SongForm";
-import SongList from "./SongList";
+import Routing from "../Routing";
 
 class SongOverview extends React.Component {
   state = {
@@ -25,29 +25,31 @@ class SongOverview extends React.Component {
   render() {
     return (
       <div>
-        <h1>Welcome to your personal playlist </h1>  
+        <h1>Welcome to your personal playlist </h1>
+        <nav>
+          <Routing />
+        </nav>
 
         <SongForm onSubmit={this.addSong} handleDelete={this.handleDelete} />
         {this.state.songs.map((song) => (
-          <div style={{ display: "flex", justifyContent: "center"}}>
+          <div style={{ display: "flex", justifyContent: "center" }}>
             <table key={song.id}>
               <th>Song: </th>
-                <tl>{song.song}</tl> 
-              <th>Artist: </th>  
-                <tl>{song.artist}</tl>
+              <tl>{song.song}</tl>
+              <th>Artist: </th>
+              <tl>{song.artist}</tl>
               <th> Genre: </th>
-                <tl>{song.genre}{" "}</tl>
+              <tl>{song.genre} </tl>
               <th>Rating:</th>
-                <tl>{song.rating}</tl>
+              <tl>{song.rating}</tl>
               <th>
-                <button onClick={this.handleDelete.bind(this, song)}>Delete              
+                <button onClick={this.handleDelete.bind(this, song)}>
+                  Delete
                 </button>
               </th>
-              
             </table>
           </div>
         ))}
-        <SongList />
       </div>
     );
   }
