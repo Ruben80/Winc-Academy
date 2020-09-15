@@ -4,8 +4,7 @@ import SongOverview from "./components/SongOverview"
 
 function App() {
   return (
-    <div className="App">  
-          
+    <div className="App">            
       <SongOverview />  
     </div>
   );

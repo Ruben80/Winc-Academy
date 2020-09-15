@@ -37,7 +37,7 @@ class SongForm extends React.Component {
           value={this.state.song}
           onChange={this.handleChange}
           placeholder="Song"
-          maxlength="15"
+          maxLength="25"
         />
 
         <input
@@ -45,7 +45,7 @@ class SongForm extends React.Component {
           value={this.state.artist}
           onChange={this.handleChange}
           placeholder="Artist"
-          maxlength="15"
+          maxLength="25"
         />
 
         <input
@@ -53,7 +53,7 @@ class SongForm extends React.Component {
           value={this.state.genre}
           onChange={this.handleChange}
           placeholder="Genre"
-          maxlength="15"
+          maxLength="25"
         />
 
         <input
@@ -61,7 +61,7 @@ class SongForm extends React.Component {
           value={this.state.rating}
           onChange={this.handleChange}
           placeholder="Rating"
-          maxlength="1"
+          maxLength="1"
         />
 
         <button onClick={this.handleSubmit}>add song</button>
