@@ -1,3 +1,1 @@
 # Dentist React app
-
-
