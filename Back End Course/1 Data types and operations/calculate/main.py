@@ -6,24 +6,30 @@ __human_name__ = 'calculate'
 
 broccoli = 2
 leek = 2
-potato = 3
+patato = 3
 brussel_sprout = 7
 
-sum_one_each = (broccoli + leek + potato + brussel_sprout)
+sum_one_each = broccoli + leek + patato + brussel_sprout
+avg_price = sum_one_each / 4
+num_patatoes = 7
+num_broccolis = 5
+num_leeks = 2
+num_brussel_sprouts = 10
 
-avg_price = (sum_one_each / 4)
-
-num_potato = 7
-num_broccoli = 5
-num_leek = 2
-num_brussel_sprout = 10
-
-sum_total = potato * num_potato + broccoli * num_broccoli + leek * num_leek + brussel_sprout * num_brussel_sprout
+sum_total = (
+    broccoli * num_broccolis
+    + patato * num_patatoes
+    + broccoli * num_broccolis
+    + leek * num_leeks
+    + brussel_sprout * num_brussel_sprouts
+)
 
 discount_percentage = 30
+discounted_sum_total = sum_total * (1 - discount_percentage / 100)
 
-discounted_sum_total = (sum_total / 100) * (100 - discount_percentage)
 
-print(discounted_sum_total)
-
-# round((totalPrice/100) * (100-discountPercentage)
+print("Leek costs: ", (leek))
+print("The sum of one each is: ", (sum_one_each))
+print("The average price is: ", (avg_price))
+print("The sum total is: ", (sum_total))
+print("The price including discount is: ", (discounted_sum_total))

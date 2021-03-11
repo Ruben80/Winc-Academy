@@ -4,5 +4,8 @@ __human_name__ = 'variables'
 
 # Add your code after this line
 string = 'This is an example of a string.'
-integer = 3
+print(string)
+integer = 9999
+print(integer)
 boolean = True
+print(boolean)
